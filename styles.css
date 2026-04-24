@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.first-header {
+  display: flex;
+  background-color: rgb(19, 25, 33);
+  height: 60px;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.amazon-logo {
+  border: 1px solid transparent;
+  padding-top: 1vh;
+  margin: 0vh 0vw 0 1.2vw;
+}
+.amazon-logo:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/******/
+
+.delivery {
+  display: flex;
+  width: 6vw;
+  padding: 0.5vh 0 0.5vh 0.9vh;
+  border: 1px solid transparent;
+}
+.delivery:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.location-logo {
+  width: 1.4vw;
+  height: 3.3vh;
+  margin-top: 2.2vh;
+  padding-bottom: 0.1vh;
+  margin-right: 3px;
+}
+
+.Dti {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  padding-top: 5px;
+}
+.Dti-line1 {
+  color: rgb(204, 204, 204);
+  font-size: 0.7rem;
+}
+.Dti-line2 {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: bold;
+}
+
+/******/
+
+.search-bar {
+  display: flex;
+  border: 3px solid transparent;
+  margin-right: 0.5vw;
+}
+.search-bar:has(#search:focus) {
+  border-radius: 8px;
+  border: 3px solid rgb(211, 132, 12);
+  outline: none;
+}
+
+.category {
+  height: 6.85vh;
+  background-color: rgb(230, 230, 230);
+  color: rgb(85, 85, 85);
+  padding: 0 0.7vw 0 0.7vw;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 3px solid transparent;
+}
+.category:focus {
+  border: 3px solid rgb(211, 132, 12);
+  outline: none;
+}
+.category:hover {
+  color: black;
+  background-color: rgb(201, 200, 200);
+  cursor: pointer;
+}
+
+#search {
+  width: 45.5vw;
+  border-left: none;
+  border-right: none;
+  padding-left: 0.37vw;
+  border: 3px solid transparent;
+  box-shadow: -1px 0 rgb(171, 172, 174);
+}
+#search:focus {
+  outline: none;
+}
+#search::placeholder {
+  font-size: 0.95rem;
+  font-family: sans-serif;
+}
+
+.magnifying-logo {
+  width: 3.35vw;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.6rem;
+  background-color: rgb(254, 189, 105);
+  color: rgb(55, 54, 52);
+  outline: none;
+}
+.magnifying-logo:hover {
+  background-color: rgb(255, 181, 84);
+  cursor: pointer;
+}
+.magnifying-logo:active {
+  border: none;
+  outline: 3px solid rgb(211, 132, 12);
+}
+
+/******/
+.Language {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 1vh -0.7vw 2vh 0.5vw;
+  border: 1px solid transparent;
+  padding-top: 5vh;
+  height: 7vh;
+  width: 3.5vw;
+}
+.Language:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+.usa-logo {
+  font-size: 0.6rem;
+  width: 1.7vw;
+  height: 4vh;
+}
+.lang-text {
+  color: white;
+  padding-bottom: 0.7vh;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+.icon {
+  display: inline-block;
+  color: rgb(167, 172, 178);
+  font-size: 0.5rem;
+  padding-top: 3vh;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+/********/
+
+.Aal {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-right: -0.8vw;
+  padding: 1.5vh 0.3vw 1vh 0.3vw;
+  border: 1px solid transparent;
+}
+
+.Aal-line1 {
+  font-size: 0.7rem;
+}
+
+.Aal-line2 {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.2px white;
+}
+
+.Aal:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/********/
+
+.icon2 {
+  margin-right: 0.5vw;
+}
+
+/********/
+
+.Rao {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 1.5vh 0.8vw 1vh 0.5vw;
+  border: 1px solid transparent;
+}
+
+.Rao-line1 {
+  font-size: 0.7rem;
+}
+
+.Rao-line2 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px white;
+}
+
+.Rao:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/*********/
+
+.cart {
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25vh 0.66vw 1.25vh 0;
+  border: 1px solid transparent;
+}
+.cart-logo {
+  height: 30px;
+  width: 40px;
+}
+.cart span {
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.cart:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .first-header {
+    display: flex;
+    background-color: rgb(19, 25, 33);
+    height: 60px;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+}
+/*****************************************************************************/
+.second-header {
+  display: flex;
+  background-color: rgb(35, 47, 62);
+  height: 39px;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.second-header .all {
+  height: 100%;
+  width: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 1vh 2vw 1vh 1.5vw;
+  margin-left: 1.2vw;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.all:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Td {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.Td:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Gc {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.Gc:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.sell {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.sell:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.registry {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.registry:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Pv {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.Pv:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Cs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.Cs:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/*****************************************************************************/
+
+.advertisment {
+  height: 55px;
+  display: block;
+}
+
+hr {
+  margin-bottom: 5vh;
+}
+
+.nav {
+  margin-left: 1.4vw;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+  color: gray;
+}
+
+.nav a {
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+.nav a:visited {
+  color: gray;
+}
+.nav a:link {
+  color: gray;
+}
+
+.nav span{
+position: relative;
+top: -2px;
+}
+/*****************************************************************************/
