@@ -4,10 +4,20 @@
   padding: 0;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid rgb(204, 204, 204);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
 .first-header {
   display: flex;
   background-color: rgb(19, 25, 33);
-  height: 60px;
+  height: 7.5vh;
   flex-direction: row;
   gap: 10px;
   align-items: center;
@@ -64,6 +74,7 @@
 
 .search-bar {
   display: flex;
+  height: 7vh;
   border: 3px solid transparent;
   margin-right: 0.5vw;
 }
@@ -74,17 +85,18 @@
 }
 
 .category {
-  height: 6.85vh;
   background-color: rgb(230, 230, 230);
   color: rgb(85, 85, 85);
   padding: 0 0.7vw 0 0.7vw;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border: 3px solid transparent;
+  outline: 3px solid transparent;
+  border: transparent;
 }
 .category:focus {
-  border: 3px solid rgb(211, 132, 12);
-  outline: none;
+  outline: 3px solid rgb(211, 132, 12);
+  border: none;
+  z-index: 2;
 }
 .category:hover {
   color: black;
@@ -93,7 +105,7 @@
 }
 
 #search {
-  width: 45.5vw;
+  width: 45vw;
   border-left: none;
   border-right: none;
   padding-left: 0.37vw;
@@ -110,19 +122,20 @@
 
 .magnifying-logo {
   width: 3.35vw;
+  height: 100%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 1.6rem;
   background-color: rgb(254, 189, 105);
   color: rgb(55, 54, 52);
-  outline: none;
+  outline: 3px solid transparent;
+  border: transparent;
 }
 .magnifying-logo:hover {
   background-color: rgb(255, 181, 84);
   cursor: pointer;
 }
 .magnifying-logo:active {
-  border: none;
   outline: 3px solid rgb(211, 132, 12);
 }
 
@@ -231,8 +244,8 @@
   border: 1px solid transparent;
 }
 .cart-logo {
-  height: 30px;
-  width: 40px;
+  height: 4vh;
+  width: 2vw;
 }
 .cart span {
   color: white;
@@ -249,20 +262,69 @@
 @media (max-width: 768px) {
   .first-header {
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(19, 25, 33);
-    height: 60px;
+    height: 100px;
     flex-direction: row;
-    gap: 5px;
+    gap: 1px;
     align-items: center;
+  }
+  #search {
+    width: 15vw;
+    border-left: none;
+    border-right: none;
+    padding-left: 0.37vw;
+    border: 3px solid transparent;
+    box-shadow: -1px 0 rgb(171, 172, 174);
+  }
+
+  .delivery {
+    display: flex;
+    margin-right: 20px;
+    width: 6vw;
+    padding: 0.5vh 0 0.5vh 0.9vh;
+    border: 1px solid transparent;
+  }
+  .usa-logo {
+    font-size: 0.6rem;
+    width: 5vw;
+    height: 4vh;
+  }
+  .Language {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid transparent;
+    padding-bottom: 5px;
+    height: 7vh;
+    width: 10vw;
+  }
+  .location-logo {
+    width: 2vw;
+    height: 2vh;
+    margin-top: 2.2vh;
+  }
+  .delivery {
+    width: 10vw;
+    border: 1px solid transparent;
+  }
+  .cart-logo {
+    height: 3vh;
+    width: 4vw;
+  }
+  .advertisement1 img {
+    transform: scale(0.7);
+    transform-origin: top left;
+    height: calc(100% / 0.7);
+    width: calc(100% / 0.7);
   }
 }
 /*****************************************************************************/
 .second-header {
   display: flex;
   background-color: rgb(35, 47, 62);
-  height: 39px;
+  height: 4.75vh;
   flex-direction: row;
-  gap: 5px;
+  gap: 1vw;
 }
 
 .second-header .all {
@@ -389,17 +451,28 @@
 
 /*****************************************************************************/
 
-.advertisment {
-  height: 55px;
+.advertisement1 {
+  height: 8.75vh;
+  width: fit-content;
   display: block;
+  margin: auto;
 }
 
-hr {
-  margin-bottom: 5vh;
+.advertisement1 img {
+  height: 100%;
+}
+
+.advertisement1:hover {
+  cursor: pointer;
+}
+
+body > hr {
+  margin: 0 2vw 5vh 2vw;
 }
 
 .nav {
   margin-left: 1.4vw;
+  margin-bottom: 7vh;
   font-size: 0.75rem;
   font-family: sans-serif;
   color: gray;
@@ -418,8 +491,1049 @@ hr {
   color: gray;
 }
 
-.nav span{
-position: relative;
-top: -2px;
+.nav span {
+  position: relative;
+  top: -2px;
 }
 /*****************************************************************************/
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.big-container {
+  display: flex;
+  margin: 0 1.296vw 0 1.296vw;
+  width: 100%;
+}
+
+.container-icons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.222vw;
+  gap: 2vh;
+  margin-right: 3px;
+}
+.container-icons img {
+  height:7vh;
+  width: 8vh;
+  border: 1px solid rgb(136, 140, 140);
+  border-radius: 25%;
+}
+
+.container-icons img:hover {
+  border: 1px solid rgb(34, 98, 160);
+  cursor: pointer;
+}
+
+/*********/
+.container-bottle {
+  width: 37.037vw;
+  height: 75vh;
+  display: flex;
+  margin-right: 4vw;
+}
+
+.container-bottle figure img {
+  width: 37.037vw;
+  display: none;
+}
+.container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+/*Not ideal code, but this is the best and only thing that occured to mind */
+.big-container:has(.container-icons img:nth-child(1):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(1):hover) .container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+.big-container:has(.container-icons img:nth-child(2):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(2):hover) .container-bottle figure img:nth-child(2) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(3):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(3):hover) .container-bottle figure img:nth-child(3) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(4):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(4):hover) .container-bottle figure img:nth-child(4) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(5):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(5):hover) .container-bottle figure img:nth-child(5) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(6):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(6):hover) .container-bottle figure img:nth-child(6) {
+  display: block;
+}
+
+figcaption {
+  color: rgb(50, 110, 168);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+figcaption:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(12, 51, 83);
+}
+
+/***************/
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  width: 51.85vw;
+}
+
+.container-text > p:nth-child(2) {
+  color: rgb(33, 98, 161);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.container-text > p:nth-child(2):hover {
+  color: rgb(12, 51, 83);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+}
+
+.trigger:hover {
+  cursor: pointer;
+}
+
+.trigger > p {
+  font-size: 0.75rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.arrow-down {
+  padding-bottom: 5px;
+}
+
+.rating {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: rgb(33, 98, 161);
+}
+
+.rating:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(12, 51, 83);
+}
+
+/************/
+
+.wrapper-popup {
+  margin-bottom: 1.25vh;
+}
+
+.wrapper-popup {
+  position: relative;
+  display: inline-block;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  bottom: 125%;
+  transform: translateX(-35%);
+  background: white;
+  border: 1px solid rgb(187, 191, 191);
+  border-radius: 10px;
+  padding: 5%;
+  z-index: 10;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.wrapper-popup:has(span:nth-child(1):hover) .popup {
+  display: block;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  width: 1.5vh;
+  height: 1.5vh;
+  background: white;
+  border-right: 1px solid rgb(187, 191, 191);
+  border-bottom: 1px solid rgb(187, 191, 191);
+  transform: rotate(45deg);
+  bottom: -7px;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.wrapper-popup span:nth-child(1) {
+  display: inline-block;
+  color: white;
+  background-color: rgb(22, 29, 38);
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+/***********/
+
+.how-many-purchased {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 0.75vh;
+}
+
+.how-many-purchased b {
+  font-weight: bolder;
+}
+
+.container-text hr {
+  margin-bottom: 1.25rem;
+}
+
+.price {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 1.25rem;
+}
+
+.price .main-price {
+  font-size: 1.75rem;
+}
+
+.price sup {
+  font-size: 1rem;
+}
+
+.FIR {
+  display: flex;
+  align-items: center;
+  color: rgb(78, 130, 180);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+.FIR p:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+}
+
+/******/
+.below-FIR {
+  display: flex;
+  align-items: center;
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.Details {
+  color: rgb(33, 98, 161);
+}
+.Details:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+}
+
+/***********************/
+
+.color {
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.color:has(.bottle-color section:nth-child(1):hover) .bottle-type::after {
+  content: " Power";
+  font-weight: bold;
+}
+
+.color:has(.bottle-color section:nth-child(2):hover) .bottle-type::after {
+  content: " Purity";
+  font-weight: bold;
+}
+
+.bottle-type {
+  color: black;
+  font-weight: bold;
+}
+
+.bottle-color {
+  display: flex;
+  width: 30.29vw;
+  gap: 0.74vw;
+}
+
+.bottle-color section {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bottle-color section:hover {
+  cursor: pointer;
+  border: 1px solid blue;
+}
+
+.bottle-color section:active {
+  cursor: pointer;
+  outline: 1px solid blue;
+}
+
+.bottle-color section img {
+  width: 5vw;
+  display: block;
+}
+
+.big-container:has(.bottle-color section:nth-child(1):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-color section:nth-child(1):hover) .container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+.big-container:has(.bottle-color section:nth-child(2):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-color section:nth-child(2):hover) .container-bottle figure img:nth-child(7) {
+  display: block;
+}
+
+.more p {
+  width: 5vw;
+  padding: 10px;
+}
+
+/****************/
+.size {
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 2.5vh;
+}
+
+.bottle-size::after {
+  content: " 64 Ounces";
+  font-weight: bold;
+  color: black;
+}
+
+.size:has(.Ounces2:hover) .bottle-size::after {
+  content: " 100 Ounces";
+  font-weight: bold;
+  color: black;
+}
+
+.size:has(.Ounces3:hover) .bottle-size::after {
+  content: " 128 Ounces";
+  font-weight: bold;
+  color: black;
+}
+
+.big-container:has(.bottle-ounce section:nth-child(1):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-ounce section:nth-child(1):hover) .container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+.big-container:has(.bottle-ounce section:nth-child(2):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-ounce section:nth-child(2):hover) .container-bottle figure img:nth-child(8) {
+  display: block;
+}
+
+.big-container:has(.bottle-ounce section:nth-child(3):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-ounce section:nth-child(3):hover) .container-bottle figure img:nth-child(9) {
+  display: block;
+}
+
+.bottle-ounce {
+  display: flex;
+  gap: 5px;
+}
+
+.bottle-ounce section {
+  padding: 5px;
+  border: 2px dashed rgb(165, 168, 168);
+  border-radius: 5px;
+}
+.Ounces1 {
+  background-color: rgb(221, 242, 255);
+  outline: 2px solid rgb(33, 98, 161);
+  border: 2px solid rgb(33, 98, 161);
+}
+
+.Ounces1:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(33, 98, 161);
+  cursor: pointer;
+}
+
+.Ounces2:hover {
+  border: 2px dashed rgb(133, 136, 136);
+  cursor: pointer;
+}
+
+.Ounces3:hover {
+  border: 2px dashed rgb(133, 136, 136);
+  cursor: pointer;
+}
+/*************/
+
+.BMBCC {
+  display: flex;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+
+.BMBCC-column1 {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 5px;
+}
+
+.BMBCC-column2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.1vw;
+  gap: 5px;
+}
+
+/*******************/
+.item-info span {
+  color: rgb(207, 102, 0);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.item-info span span {
+  color: rgb(78, 130, 180);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+.item-info span span:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*************/
+.report-error span {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.report-error span span {
+  color: rgb(78, 130, 180);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+
+.report-error span span:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main {
+    transform: scale(0.7);
+    transform-origin: top left;
+    height: calc(100% / 0.7);
+    width: calc(100% / 0.7);
+    margin-bottom: -400px;
+  }
+}
+/**/
+.right-box {
+  margin-left: 1vw;
+  margin-right: 4vw;
+}
+
+.container-price {
+  width: 18.51vw;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+  border: 1px solid rgb(213, 217, 217);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.before-Details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.before-Details section {
+  display: flex;
+  align-items: center;
+}
+
+.before-Details section img {
+  height: 2.5vh;
+  width: 1.481vw;
+}
+
+.container-price-Details2 {
+  display: flex;
+  align-items: center;
+  color: rgb(33, 98, 161);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 1.25vh;
+}
+
+.container-price-Details2:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+}
+
+/************/
+
+.container-price-Details3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container-price-Details3 > span {
+  color: rgb(11, 123, 85);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1.25rem;
+}
+
+#Quantity {
+  padding: 5px;
+  border: 1px solid rgb(136, 140, 140);
+  border-radius: 5px;
+}
+
+#Quantity:hover {
+  outline: 2px solid rgb(136, 140, 140);
+  outline-offset: 2px;
+  cursor: pointer;
+}
+
+#Quantity:focus {
+  background-color: rgb(237, 248, 255);
+  border: 1px solid rgb(33, 98, 161);
+}
+
+#Quantity option {
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(33, 98, 161);
+}
+
+/***************/
+
+.button {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.Atc {
+  background-color: rgb(255, 216, 20);
+}
+
+.Atc:hover {
+  background-color: rgb(245, 207, 19);
+}
+
+.Atc:active {
+  background-color: rgb(245, 174, 19);
+}
+
+.Bn {
+  background-color: rgb(255, 164, 28);
+}
+
+.Bn:hover {
+  background-color: rgb(255, 138, 28);
+}
+
+.Bn:active {
+  background-color: rgb(255, 100, 28);
+}
+
+/*******/
+
+.container-price-Details4 {
+  display: flex;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+  justify-content: space-evenly;
+}
+
+.SSRP {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  color: rgb(86, 89, 89);
+}
+
+.SSRP p:nth-child(3) {
+  margin-bottom: 15px;
+}
+
+.SSRP:hover {
+  cursor: pointer;
+}
+
+.ASFS {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  margin-left: -3.703vw;
+  color: rgb(78, 130, 180);
+}
+
+.ASFS:hover {
+  cursor: pointer;
+  color: rgb(12, 51, 83);
+}
+
+.ASFS p:nth-child(1) {
+  color: black;
+}
+
+/*****************/
+.container-price-Details5 {
+  display: flex;
+  align-items: center;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: rgb(78, 130, 180);
+}
+
+.container-price-Details5 > img {
+  width: 1.481vw;
+}
+
+.container-price-Details5 > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(12, 51, 83);
+}
+/*************/
+
+.container-price-Details6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-price-Details6 > button {
+  padding: 7px;
+  border: 1px solid rgb(136, 140, 140);
+  border-radius: 5px;
+  background-color: white;
+  text-align: start;
+}
+
+.container-price-Details6 > button:hover {
+  cursor: pointer;
+  background-color: rgb(247, 250, 250);
+}
+
+.advertisement3 {
+  border: 1px solid rgb(204, 204, 204);
+}
+
+/********/
+.advertisement4 {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 2vw 0 2vw;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.advertisement4-details {
+  display: flex;
+  align-items: center;
+}
+
+.advertisement4-details img {
+  width: 30vh;
+  height: 30vh;
+}
+
+.advertisement4-details input {
+  position: relative;
+  bottom: 200px;
+  left: 100px;
+}
+
+.advertisement4-img1 {
+  display: flex;
+  flex-direction: column;
+  width: 35vh;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+  gap: 5px;
+}
+
+.advertisement4-img2 {
+  display: flex;
+  flex-direction: column;
+  width: 35vh;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+  gap: 5px;
+}
+
+.advertisement4 .price {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.advertisement4 .price .main-price {
+  font-size: 1.1rem;
+}
+
+.advertisement4 .price sup {
+  font-size: 1rem;
+}
+
+.advertisement4-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20vw;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.advertisement4-price p:first-child {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.advertisement4-price button {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 216, 20);
+}
+
+.advertisement4-price button:hover {
+  background-color: rgb(245, 207, 19);
+  cursor: pointer;
+}
+
+.advertisement4-price button:active {
+  background-color: rgb(245, 174, 19);
+}
+
+.advertisement4-price p span {
+  color: rgb(78, 130, 180);
+}
+
+.advertisement4-price p span:hover {
+  cursor: pointer;
+  color: rgb(12, 51, 83);
+  text-decoration: underline;
+}
+
+.advertisement4:has(.advertisement4-img1 input:checked):has(.advertisement4-img2 input:checked) .advertisement4-price p:first-child::after {
+  content: "ILS 124.05";
+  font-weight: bold;
+}
+
+.advertisement4:has(.advertisement4-img1 input:checked) .advertisement4-price p:first-child::after {
+  content: "ILS 60.51";
+  font-weight: bold;
+}
+
+.advertisement4:has(.advertisement4-img2 input:checked) .advertisement4-price p:first-child::after {
+  content: "ILS 63.54";
+  font-weight: bold;
+}
+
+.advertisement4:not(:has(.advertisement4-img1 input:checked)) :not(:has(.advertisement4-img2 input:checked)) .advertisement4-price {
+  display: none;
+}
+
+.choose-items-default {
+  display: none;
+  border: 2px solid blue;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 10px solid blue;
+}
+
+.choose-items-default p span {
+  display: inline-flex;
+  border-radius: 50%;
+  color: white;
+  background-color: blue;
+  width: 3vh;
+  height: 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertisement4:not(:has(.advertisement4-img1 input:checked)):not(:has(.advertisement4-img2 input:checked)) .choose-items-default {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .advertisement4 {
+    transform: scale(0.7);
+    transform-origin: top left;
+    height: calc(100% / 0.7);
+    width: calc(100% / 0.7);
+    margin-bottom: -100px;
+  }
+}
+
+/*********************************************/
+
+.footer {
+  margin: 0 2vw 0 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-text {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text > p {
+  font-size: 0.875rem;
+}
+
+.footer-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-image1 {
+  font-weight: bolder;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.footer-image1:hover {
+  cursor: pointer;
+}
+/**********/
+.footer-image2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-image2 > img {
+  display: block;
+  width: fit-content;
+}
+
+.image-text {
+  color: rgb(78, 130, 180);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  width: 12.6vw;
+}
+.image-text:hover {
+  text-decoration: underline;
+  color: rgb(12, 51, 83);
+}
+
+.footer-image2:hover {
+  cursor: pointer;
+}
+
+.footer-image-details {
+  display: flex;
+  align-items: center;
+}
+
+.footer-image-details > p {
+  color: rgb(78, 130, 180);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.AC {
+  color: white;
+  background-color: rgb(22, 29, 38);
+  width: fit-content;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.LTD {
+  color: white;
+  background-color: rgb(204, 12, 57);
+  padding: 3px;
+  font-size: 0.75rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  width: fit-content;
+}
+
+.footer-discount {
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(204, 12, 57);
+}
+
+.footer-discount > sup {
+  font-size: 0.5rem;
+}
+.footer-main-price {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.Typical {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: rgb(145, 147, 147);
+  font-size: 0.75rem;
+}
+
+.Typical > span {
+  text-decoration: line-through;
+}
+
+/****************/
+.footer-image3 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-image3:hover {
+  cursor: pointer;
+}
+
+.footer-image3 > img {
+  display: block;
+  width: fit-content;
+}
+/****************/
+.footer-image4 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-image4:hover {
+  cursor: pointer;
+}
+
+.footer-image4 > img {
+  display: block;
+  width: fit-content;
+}
+/****************/
+.footer-image5 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-image5:hover {
+  cursor: pointer;
+}
+
+.footer-image5 > img {
+  display: block;
+  width: fit-content;
+}
+/****************/
+.footer-image6 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-image6:hover {
+  cursor: pointer;
+}
+
+.footer-image6 > img {
+  display: block;
+  width: fit-content;
+}
+/****************/
+.footer-image7 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-right: 30px;
+}
+
+.footer-image7:hover {
+  cursor: pointer;
+}
+
+.footer-image7 > img {
+  display: block;
+  width: fit-content;
+}
+/****************/
+.footer-image8 {
+  font-weight: bolder;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.footer-image8:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    transform: scale(0.55);
+    transform-origin: top left;
+    height: calc(100% / 0.6);
+    width: calc(100% / 0.6);
+  }
+}
