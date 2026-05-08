@@ -1,0 +1,181 @@
+/**
+This section is about the second header
+**/
+
+.second-header {
+  display: flex;
+  background-color: rgb(35, 47, 62);
+  height: 4.75vh;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.second-header .all {
+  height: 100%;
+  width: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 1vh 2vw 1vh 1.5vw;
+  margin-left: 1.2vw;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.all:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Td {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.Td:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Gc {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.Gc:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.sell {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.sell:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.registry {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.registry:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Pv {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.Pv:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/************/
+
+.Cs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  border: 1px solid transparent;
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+.Cs:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/*****************************************************************************/
+
+.advertisement1 {
+  height: 8.75vh;
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+
+.advertisement1 img {
+  height: 100%;
+}
+
+.advertisement1:hover {
+  cursor: pointer;
+}
+
+body > hr {
+  margin: 0 2vw 5vh 2vw;
+}
+
+.nav {
+  margin-left: 1.4vw;
+  margin-bottom: 7vh;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+  color: gray;
+}
+
+.nav a {
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+.nav a:visited {
+  color: gray;
+}
+.nav a:link {
+  color: gray;
+}
+
+.nav span {
+  position: relative;
+  top: -2px;
+}
+/*****************************************************************************/
