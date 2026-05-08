@@ -1,0 +1,480 @@
+/**
+This section is about the left and middle parts of the main
+(called them container-bottle + container-icons and container-text)
+over all 3 parts
+**/
+
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.big-container {
+  display: flex;
+  margin: 0 1.296vw 0 1.296vw;
+  width: 100%;
+}
+
+.container-icons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.222vw;
+  gap: 2vh;
+  margin-right: 3px;
+}
+.container-icons img {
+  height:7vh;
+  width: 8vh;
+  border: 1px solid rgb(136, 140, 140);
+  border-radius: 25%;
+}
+
+.container-icons img:hover {
+  border: 1px solid rgb(34, 98, 160);
+  cursor: pointer;
+}
+
+/*********/
+.container-bottle {
+  width: 37.037vw;
+  height: 75vh;
+  display: flex;
+  margin-right: 4vw;
+}
+
+.container-bottle figure img {
+  width: 37.037vw;
+  display: none;
+}
+.container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+/*Not ideal code, but this is the best and only thing that occured to mind */
+.big-container:has(.container-icons img:nth-child(1):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(1):hover) .container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+.big-container:has(.container-icons img:nth-child(2):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(2):hover) .container-bottle figure img:nth-child(2) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(3):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(3):hover) .container-bottle figure img:nth-child(3) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(4):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(4):hover) .container-bottle figure img:nth-child(4) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(5):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(5):hover) .container-bottle figure img:nth-child(5) {
+  display: block;
+}
+.big-container:has(.container-icons img:nth-child(6):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.container-icons img:nth-child(6):hover) .container-bottle figure img:nth-child(6) {
+  display: block;
+}
+
+figcaption {
+  color: rgb(50, 110, 168);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+figcaption:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(12, 51, 83);
+}
+
+/***************/
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  width: 51.85vw;
+}
+
+.container-text > p:nth-child(2) {
+  color: rgb(33, 98, 161);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.container-text > p:nth-child(2):hover {
+  color: rgb(12, 51, 83);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+}
+
+.trigger:hover {
+  cursor: pointer;
+}
+
+.trigger > p {
+  font-size: 0.75rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.arrow-down {
+  padding-bottom: 5px;
+}
+
+.rating {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: rgb(33, 98, 161);
+}
+
+.rating:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(12, 51, 83);
+}
+
+/************/
+
+.wrapper-popup {
+  margin-bottom: 1.25vh;
+}
+
+.wrapper-popup {
+  position: relative;
+  display: inline-block;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  bottom: 125%;
+  transform: translateX(-35%);
+  background: white;
+  border: 1px solid rgb(187, 191, 191);
+  border-radius: 10px;
+  padding: 5%;
+  z-index: 10;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.wrapper-popup:has(span:nth-child(1):hover) .popup {
+  display: block;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  width: 1.5vh;
+  height: 1.5vh;
+  background: white;
+  border-right: 1px solid rgb(187, 191, 191);
+  border-bottom: 1px solid rgb(187, 191, 191);
+  transform: rotate(45deg);
+  bottom: -7px;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.wrapper-popup span:nth-child(1) {
+  display: inline-block;
+  color: white;
+  background-color: rgb(22, 29, 38);
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+/***********/
+
+.how-many-purchased {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 0.75vh;
+}
+
+.how-many-purchased b {
+  font-weight: bolder;
+}
+
+.container-text hr {
+  margin-bottom: 1.25rem;
+}
+
+.price {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 1.25rem;
+}
+
+.price .main-price {
+  font-size: 1.75rem;
+}
+
+.price sup {
+  font-size: 1rem;
+}
+
+.FIR {
+  display: flex;
+  align-items: center;
+  color: rgb(78, 130, 180);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+.FIR p:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+}
+
+/******/
+.below-FIR {
+  display: flex;
+  align-items: center;
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.Details {
+  color: rgb(33, 98, 161);
+}
+.Details:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+}
+
+/***********************/
+
+.color {
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.color:has(.bottle-color section:nth-child(1):hover) .bottle-type::after {
+  content: " Power";
+  font-weight: bold;
+}
+
+.color:has(.bottle-color section:nth-child(2):hover) .bottle-type::after {
+  content: " Purity";
+  font-weight: bold;
+}
+
+.bottle-type {
+  color: black;
+  font-weight: bold;
+}
+
+.bottle-color {
+  display: flex;
+  width: 30.29vw;
+  gap: 0.74vw;
+}
+
+.bottle-color section {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bottle-color section:hover {
+  cursor: pointer;
+  border: 1px solid blue;
+}
+
+.bottle-color section:active {
+  cursor: pointer;
+  outline: 1px solid blue;
+}
+
+.bottle-color section img {
+  width: 5vw;
+  display: block;
+}
+
+.big-container:has(.bottle-color section:nth-child(1):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-color section:nth-child(1):hover) .container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+.big-container:has(.bottle-color section:nth-child(2):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-color section:nth-child(2):hover) .container-bottle figure img:nth-child(7) {
+  display: block;
+}
+
+.more p {
+  width: 5vw;
+  padding: 10px;
+}
+
+/****************/
+.size {
+  color: rgb(86, 89, 89);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 2.5vh;
+}
+
+.bottle-size::after {
+  content: " 64 Ounces";
+  font-weight: bold;
+  color: black;
+}
+
+.size:has(.Ounces2:hover) .bottle-size::after {
+  content: " 100 Ounces";
+  font-weight: bold;
+  color: black;
+}
+
+.size:has(.Ounces3:hover) .bottle-size::after {
+  content: " 128 Ounces";
+  font-weight: bold;
+  color: black;
+}
+
+.big-container:has(.bottle-ounce section:nth-child(1):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-ounce section:nth-child(1):hover) .container-bottle figure img:nth-child(1) {
+  display: block;
+}
+
+.big-container:has(.bottle-ounce section:nth-child(2):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-ounce section:nth-child(2):hover) .container-bottle figure img:nth-child(8) {
+  display: block;
+}
+
+.big-container:has(.bottle-ounce section:nth-child(3):hover) .container-bottle figure img {
+  display: none;
+}
+.big-container:has(.bottle-ounce section:nth-child(3):hover) .container-bottle figure img:nth-child(9) {
+  display: block;
+}
+
+.bottle-ounce {
+  display: flex;
+  gap: 5px;
+}
+
+.bottle-ounce section {
+  padding: 5px;
+  border: 2px dashed rgb(165, 168, 168);
+  border-radius: 5px;
+}
+.Ounces1 {
+  background-color: rgb(221, 242, 255);
+  outline: 2px solid rgb(33, 98, 161);
+  border: 2px solid rgb(33, 98, 161);
+}
+
+.Ounces1:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(33, 98, 161);
+  cursor: pointer;
+}
+
+.Ounces2:hover {
+  border: 2px dashed rgb(133, 136, 136);
+  cursor: pointer;
+}
+
+.Ounces3:hover {
+  border: 2px dashed rgb(133, 136, 136);
+  cursor: pointer;
+}
+/*************/
+
+.BMBCC {
+  display: flex;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+
+.BMBCC-column1 {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 5px;
+}
+
+.BMBCC-column2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.1vw;
+  gap: 5px;
+}
+
+/*******************/
+.item-info span {
+  color: rgb(207, 102, 0);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.item-info span span {
+  color: rgb(78, 130, 180);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+.item-info span span:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*************/
+.report-error span {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.report-error span span {
+  color: rgb(78, 130, 180);
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+
+.report-error span span:hover {
+  color: rgb(12, 51, 83);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main {
+    transform: scale(0.7);
+    transform-origin: top left;
+    height: calc(100% / 0.7);
+    width: calc(100% / 0.7);
+    margin-bottom: -400px;
+  }
+}
+
+/*****************************************************************************/
