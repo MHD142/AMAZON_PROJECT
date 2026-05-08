@@ -22,6 +22,38 @@ You can view the deployed project here:
 - Hover and focus effects using CSS
 - Built without JavaScript
 
+## Screenshots
+
+### Headers - Top Section
+
+![Header section 1](ScreenShots/ScreenShot1(header1+2).png)
+
+### Main Product Section
+
+![Main product section](ScreenShots/ScreenShot2(main).png)
+
+### Hover Effect - First Icon
+
+This screenshot shows the image that appears when hovering over the first icon.
+
+![First icon hover effect](ScreenShots/ScreenShot3(hover-icon1).png)
+
+### Hover Effect - Second Icon
+
+This screenshot shows the image that appears when hovering over the second icon.
+
+![Second icon hover effect](ScreenShots/ScreenShot3(hover-icon2).png)
+
+### Frequently Bought Together Section
+
+![Frequently bought together section](ScreenShots/ScreenShot4(footer1).png)
+
+### Related Products Footer Section
+
+This section shows other bottle products with their information, discount, and price.
+
+![Related products footer section](ScreenShots/ScreenShot5(footer2).png)
+
 ## Technologies Used
 
 - HTML
